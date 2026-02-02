@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Indie - Lo mejor del desarrollo independiente</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        indie: {
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#8b5cf6', // Violeta
+                            secondary: '#06b6d4', // Cyan
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
+        }
+    </style>
+</head>
+
+<body class="bg-indie-dark text-slate-300 font-sans antialiased">
+
+    <!-- Navbar Sticky -->
+    <nav class="fixed w-full z-50 bg-indie-dark/90 backdrop-blur-sm border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indie-accent to-indie-secondary">
+                        <i class="fa-solid fa-gamepad mr-2 text-indie-accent"></i>MUNDO INDIE
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#destacado" class="hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Destacados</a>
+                        <a href="#noticia" class="hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Noticias</a>
+                        <a href="#proximamente" class="hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Lanzamientos</a>
+                        <a href="#registro" class="bg-indie-accent hover:bg-violet-700 text-white px-4 py-2 rounded-md text-sm font-medium transition shadow-lg shadow-violet-500/30">Únete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative pt-32 pb-12 lg:pt-48 lg:pb-24 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <!-- Imagen de fondo placeholder de alta calidad -->
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-indie-dark to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+                Explora el Universo <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-indie-accent to-indie-secondary">Indie</span>
+            </h1>
+            <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+                Descubre las joyas ocultas, las obras maestras narrativas y los desafíos más exigentes desarrollados por estudios independientes.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#destacado" class="px-8 py-3 bg-white text-indie-dark font-bold rounded-full hover:bg-slate-200 transition">Ver Juegos</a>
+                <a href="#registro" class="px-8 py-3 border border-slate-500 text-white font-bold rounded-full hover:border-indie-accent hover:text-indie-accent transition">Suscribirse</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 py-12">
+
+        <!-- Sección Destacados (Grid) -->
+        <section id="destacado">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Indies Más Destacados</h2>
+                <div class="h-1 w-24 bg-indie-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Hollow Knight -->
+                <article class="bg-indie-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-violet-500/10 transition duration-300 group border border-slate-700/50">
+                    <div class="relative aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/UAO2urG23S4?si=iKTURfVP-t8wfLK4" title="Hollow Knight Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-indie-secondary transition">Hollow Knight</h3>
+                            <span class="px-2 py-1 bg-slate-700 text-xs rounded text-slate-300">Metroidvania</span>
+                        </div>
+                        <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                            Una aventura épica a través de un vasto reino en ruinas de insectos y héroes. Explora cavernas serpenteantes, lucha contra criaturas corrompidas y hazte amigo de extraños insectos.
+                        </p>
+                        <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-800 hover:bg-[#171a21] text-white rounded-lg transition border border-slate-600">
+                            <i class="fa-brands fa-steam mr-2"></i> Ver en Steam
+                        </a>
+                    </div>
+                </article>
+
+                <!-- The Binding of Isaac -->
+                <article class="bg-indie-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-violet-500/10 transition duration-300 group border border-slate-700/50">
+                    <div class="relative aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/A_C90i1jVzY?si=HK_9k5VdQeu0lkGk" title="The Binding of Isaac Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-indie-secondary transition">The Binding of Isaac</h3>
+                            <span class="px-2 py-1 bg-slate-700 text-xs rounded text-slate-300">Roguelike</span>
+                        </div>
+                        <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                            Un shooter RPG de acción generado aleatoriamente con fuertes elementos de Roguelike. Sigue a Isaac en su viaje para descubrir extraños tesoros que cambian su forma y le otorgan habilidades sobrehumanas.
+                        </p>
+                        <a href="https://store.steampowered.com/app/113200/The_Binding_of_Isaac/" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-800 hover:bg-[#171a21] text-white rounded-lg transition border border-slate-600">
+                            <i class="fa-brands fa-steam mr-2"></i> Ver en Steam
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Hades -->
+                <article class="bg-indie-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-violet-500/10 transition duration-300 group border border-slate-700/50">
+                    <div class="relative aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/BJNfc-xRYJI?si=4Rb47rkJ11xD2jU0" title="Hades Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-indie-secondary transition">Hades</h3>
+                            <span class="px-2 py-1 bg-slate-700 text-xs rounded text-slate-300">Action RPG</span>
+                        </div>
+                        <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                            Desafía al dios de los muertos mientras te abres paso a través del Inframundo. Controla a Zagreus en este roguelike dungeon crawler que combina la acción rápida con una narrativa profunda.
+                        </p>
+                        <a href="https://store.steampowered.com/app/1145360/Hades/?l=spanish" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-800 hover:bg-[#171a21] text-white rounded-lg transition border border-slate-600">
+                            <i class="fa-brands fa-steam mr-2"></i> Ver en Steam
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Undertale -->
+                <article class="bg-indie-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-violet-500/10 transition duration-300 group border border-slate-700/50">
+                    <div class="relative aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/SqjY_-beWi0?si=F2Zr0sHqg5_fV_ag" title="Undertale Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-indie-secondary transition">Undertale</h3>
+                            <span class="px-2 py-1 bg-slate-700 text-xs rounded text-slate-300">RPG</span>
+                        </div>
+                        <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                            El juego de rol donde no tienes que matar a nadie. Controla a un humano que cae bajo tierra en un mundo de monstruos. Tus decisiones afectan la historia, el diálogo y el destino del mundo.
+                        </p>
+                        <a href="https://store.steampowered.com/app/391540/Undertale/" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-800 hover:bg-[#171a21] text-white rounded-lg transition border border-slate-600">
+                            <i class="fa-brands fa-steam mr-2"></i> Ver en Steam
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Banner de Noticias -->
+        <section id="noticia" class="bg-gradient-to-r from-violet-900 to-indie-card rounded-2xl p-8 md:p-12 text-center shadow-lg border border-violet-700/30">
+            <h2 class="text-3xl font-bold text-white mb-4">Mantente Informado</h2>
+            <p class="text-violet-200 mb-8 max-w-2xl mx-auto">Las últimas novedades sobre parches, DLCs y anuncios sorpresa del mundo independiente.</p>
+            <a href="#" class="inline-block bg-white text-violet-900 font-bold py-3 px-8 rounded-full hover:bg-violet-100 transition transform hover:scale-105">
+                <i class="fa-solid fa-newspaper mr-2"></i> Leer Noticias Relevantes
+            </a>
+        </section>
+
+        <!-- Próximos Lanzamientos -->
+        <section id="proximamente">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-white mb-2">Próximos Lanzamientos</h2>
+                <p class="text-slate-400">Marca tu calendario</p>
+            </div>
+
+            <div class="bg-indie-card rounded-xl overflow-hidden shadow-lg border border-slate-700 overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-800 text-slate-200 uppercase text-xs tracking-wider">
+                            <th class="p-4 font-semibold">Nombre</th>
+                            <th class="p-4 font-semibold">Fecha</th>
+                            <th class="p-4 font-semibold">Género</th>
+                            <th class="p-4 font-semibold">Estudio</th>
+                            <th class="p-4 font-semibold hidden md:table-cell">Plataformas</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700 text-sm">
+                        <tr class="hover:bg-slate-700/50 transition">
+                            <td class="p-4 font-medium text-white">The Last Faith</td>
+                            <td class="p-4 text-indie-secondary">Ya disponible</td>
+                            <td class="p-4">Soulslike</td>
+                            <td class="p-4">Kumi Souls</td>
+                            <td class="p-4 hidden md:table-cell text-xs text-slate-400">PC, Switch, PS5, Xbox</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition bg-slate-800/20">
+                            <td class="p-4 font-medium text-white">Hollow Knight: Silksong</td>
+                            <td class="p-4 text-indie-secondary">TBA</td>
+                            <td class="p-4">Metroidvania</td>
+                            <td class="p-4">Team Cherry</td>
+                            <td class="p-4 hidden md:table-cell text-xs text-slate-400">PC, Switch, PS5, Xbox</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition">
+                            <td class="p-4 font-medium text-white">Replaced</td>
+                            <td class="p-4 text-indie-secondary">2024</td>
+                            <td class="p-4">Aventura Acción</td>
+                            <td class="p-4">Sad Cat Studios</td>
+                            <td class="p-4 hidden md:table-cell text-xs text-slate-400">PC, Xbox</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition bg-slate-800/20">
+                            <td class="p-4 font-medium text-white">Crowsworn</td>
+                            <td class="p-4 text-indie-secondary">TBA</td>
+                            <td class="p-4">Metroidvania</td>
+                            <td class="p-4">Mongoose Rodeo</td>
+                            <td class="p-4 hidden md:table-cell text-xs text-slate-400">PC</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition">
+                            <td class="p-4 font-medium text-white">Earthblade</td>
+                            <td class="p-4 text-indie-secondary">2024</td>
+                            <td class="p-4">Metroidvania</td>
+                            <td class="p-4">Extremely OK</td>
+                            <td class="p-4 hidden md:table-cell text-xs text-slate-400">PC</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-center text-slate-500 mt-4 italic">* Fechas sujetas a cambios por parte de los desarrolladores.</p>
+        </section>
+
+        <!-- Formularios -->
+        <section id="registro" class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Columna Izquierda: Registro -->
+            <div class="bg-indie-card p-8 rounded-2xl border border-slate-700 shadow-lg">
+                <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-700 pb-2">
+                    <i class="fa-solid fa-user-plus mr-2 text-indie-secondary"></i> Únete a la comunidad
+                </h3>
+                <form action="#" class="space-y-5">
+                    <div>
+                        <label for="usuario" class="block text-sm font-medium text-slate-400 mb-1">Usuario</label>
+                        <input type="text" id="usuario" name="nombre" placeholder="Tu nick gamer" class="w-full bg-slate-900 border border-slate-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:border-indie-accent focus:ring-1 focus:ring-indie-accent transition">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-400 mb-1">Email</label>
+                        <input type="email" id="email" name="correo" placeholder="correo@ejemplo.com" class="w-full bg-slate-900 border border-slate-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:border-indie-accent focus:ring-1 focus:ring-indie-accent transition">
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-slate-400 mb-1">Contraseña</label>
+                        <input type="password" id="password" name="contraseña" class="w-full bg-slate-900 border border-slate-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:border-indie-accent focus:ring-1 focus:ring-indie-accent transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-1">Sube tu gameplay (opcional)</label>
+                        <div class="flex items-center justify-center w-full">
+                            <label for="videoFile" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-700 border-dashed rounded-lg cursor-pointer bg-slate-800 hover:bg-slate-700 transition">
+                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                    <i class="fa-solid fa-cloud-arrow-up text-2xl text-slate-400 mb-2"></i>
+                                    <p class="text-xs text-slate-400">Click para subir video</p>
+                                </div>
+                                <input id="videoFile" type="file" class="hidden" accept="video/*" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" id="acepta" class="mt-1 accent-indie-accent" required>
+                        <label for="acepta" class="text-xs text-slate-400">He leído y acepto los términos y condiciones de la plataforma.</label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-indie-accent to-violet-600 hover:from-violet-600 hover:to-violet-700 text-white font-bold py-3 rounded-lg shadow-lg shadow-violet-500/20 transition transform hover:-translate-y-1">
+                        Registrarse
+                    </button>
+                </form>
+            </div>
+
+            <!-- Columna Derecha: Encuesta y Feedback -->
+            <div class="space-y-8">
+                <!-- Encuesta -->
+                <div class="bg-indie-card p-8 rounded-2xl border border-slate-700 shadow-lg">
+                    <h3 class="text-xl font-bold text-white mb-4">¿Cómo nos conociste?</h3>
+                    <form class="space-y-3">
+                        <label class="flex items-center p-3 bg-slate-800 rounded-lg cursor-pointer hover:bg-slate-700 transition">
+                            <input type="radio" name="eleccion" value="recom" class="accent-indie-secondary w-4 h-4" checked>
+                            <span class="ml-3 text-slate-300">Recomendación de un amigo</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-slate-800 rounded-lg cursor-pointer hover:bg-slate-700 transition">
+                            <input type="radio" name="eleccion" value="busqueda" class="accent-indie-secondary w-4 h-4">
+                            <span class="ml-3 text-slate-300">Búsqueda en Google</span>
+                        </label>
+                        <label class="flex items-center p-3 bg-slate-800 rounded-lg cursor-pointer hover:bg-slate-700 transition">
+                            <input type="radio" name="eleccion" value="publi" class="accent-indie-secondary w-4 h-4">
+                            <span class="ml-3 text-slate-300">Publicidad / Redes Sociales</span>
+                        </label>
+                    </form>
+                </div>
+
+                <!-- Feedback -->
+                <div class="bg-indie-card p-8 rounded-2xl border border-slate-700 shadow-lg">
+                    <h3 class="text-xl font-bold text-white mb-4">Tu opinión nos importa</h3>
+                    <form class="space-y-4">
+                        <textarea rows="3" placeholder="¿Qué mejorarías de la web?" class="w-full bg-slate-900 border border-slate-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:border-indie-secondary transition resize-none"></textarea>
+                        
+                        <div class="flex gap-4">
+                            <select class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-indie-secondary">
+                                <option value="" disabled selected>Valoración</option>
+                                <option value="excel">Excelente ★★★★★</option>
+                                <option value="bien">Buena ★★★★</option>
+                                <option value="normal">Normal ★★★</option>
+                                <option value="mal">Mejorable ★★</option>
+                            </select>
+                            <button type="submit" class="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-medium transition">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] border-t border-slate-800 pt-12 pb-8 mt-24">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-slate-400 hover:text-white text-2xl transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white text-2xl transition"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white text-2xl transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm mb-2">
+                &copy; 2024 Mundo Indie. Todos los derechos reservados.
+            </p>
+            <p class="text-slate-600 text-xs">
+                Desarrollado por <span class="text-indie-accent">Manuel Losa Barrios</span> | ManuMI123@correo.es
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
